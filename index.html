@@ -31,8 +31,8 @@ body {
     background-color: #87bde8; /* 天蓝色背景 */
     color: black;
     padding: 50px;
-    align-items: center;
-    gap: 20px; /* 左右间距 */
+    align-items: flex-start; /* 左右对齐顶部 */
+    gap: 20px;
 }
 
 .section .text {
@@ -49,7 +49,7 @@ body {
     width: 100%;       /* 填满右半屏宽度 */
     height: auto;      /* 高度自适应 */
     display: block;
-    border-radius: 8px; /* 可保留圆角 */
+    border-radius: 8px; /* 圆角 */
 }
 
 /* 第三屏：两列文本 */
@@ -92,8 +92,8 @@ body {
         From classical to popular, from basic to advanced, we help each student find their own musical language.
     </div>
     <div class="image-box">
-        <!-- 先用占位图测试，如果你本地有2.jpg，替换src即可 -->
-        <img src="https://via.placeholder.com/400x300" alt="Studio Image">
+        <!-- 本地图片，请确保2.jpg在index.html同目录 -->
+        <img src="./2.jpg" alt="Studio Image">
     </div>
 </div>
 
