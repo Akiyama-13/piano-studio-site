@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Love-Piano 100</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 第一屏：大标题背景图 */
+.header {
+    background: url('1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 78px; /* 改为78 */
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+/* 第二屏：蓝色背景，左文字右直接图片 */
+.section {
+    display: flex;
+    background-color: #87bde8; /* 天蓝色背景 */
+    color: black;
+    padding: 50px;
+    align-items: center;
+    gap: 20px; /* 左右间距 */
+}
+
+.section .text {
+    flex: 1;
+    font-size: 18px;
+}
+
+/* 右半屏直接显示图片 */
+.section .image-box {
+    flex: 1;
+}
+
+.section .image-box img {
+    width: 100%;       /* 填满右半屏宽度 */
+    height: auto;      /* 高度自*
