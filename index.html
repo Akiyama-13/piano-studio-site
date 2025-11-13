@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Love-Piano 100</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 第一屏：大标题背景图 */
+.header {
+    background: url('1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 78px; /* 改为78 */
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+/* 第二屏：蓝色背景，左文字右直接图片 */
+.section {
+    display: flex;
+    background-color: #87bde8; /* 天蓝色背景 */
+    color: black;
+    padding: 50px;
+    align-items: center;
+    gap: 20px; /* 左右间距 */
+}
+
+.section .text {
+    flex: 1;
+    font-size: 18px;
+}
+
+/* 右半屏直接显示图片 */
+.section .image-box {
+    flex: 1;
+}
+
+.section .image-box img {
+    width: 100%;       /* 填满右半屏宽度 */
+    height: auto;      /* 高度自适应 */
+    display: block;
+    border-radius: 8px; /* 可保留圆角 */
+}
+
+/* 第三屏：两列文本 */
+.section-two {
+    display: flex;
+    background-color: #87bde8;
+    color: black;
+    padding: 50px;
+    justify-content: space-between;
+    gap: 20px;
+}
+.section-two .left, .section-two .right {
+    flex: 1;
+    font-size: 18px;
+}
+.section-two .right b {
+    font-weight: bold;
+}
+
+/* 第四屏：页脚 */
+.footer {
+    background-color: #d3d3d3;
+    padding: 20px;
+    font-size: 13px;
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<!-- 第一屏 -->
+<div class="header">
+    Love-Piano 100
+</div>
+
+<!-- 第二屏 -->
+<div class="section">
+    <div class="text">
+        Located in Los Angeles, our piano studio offers professional and patient instruction to students of all ages.<br><br>
+        From classical to popular, from basic to advanced, we help each student find their own musical language.
+    </div>
+    <div class="image-box">
+        <!-- 先用占位图测试，如果你本地有2.jpg，替换src即可 -->
+        <img src="https://via.placeholder.com/400x300" alt="Studio Image">
+    </div>
+</div>
+
+<!-- 第三屏 -->
+<div class="section-two">
+    <div class="left">
+        Course Overview<br>
+        Private Lessons<br>
+        Group Piano<br>
+        Professional Coaching
+    </div>
+    <div class="right">
+        <b>Multiple course approaches</b><br>
+        in studio<br>
+        at home<br>
+        online
+    </div>
+</div>
+
+<!-- 第四屏：页脚 -->
+<div class="footer">
+    Contact information<br>
+    Instagram: love_piano100<br>
+    Gmail: love.piano.00100@gmail.com
+</div>
+
+</body>
+</html>
