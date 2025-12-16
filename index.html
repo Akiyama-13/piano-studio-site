@@ -3,162 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <title>Love-Piano 100</title>
+
 <style>
-body {
+/* ===== 全局清零，杜绝白边 ===== */
+html, body {
     margin: 0;
+    padding: 0;
+    background-color: #87bde8;
     font-family: 'Roboto', sans-serif;
 }
 
-/* 第一屏：大标题背景图 */
+/* ===== 第一屏：1.jpg 直接做背景 ===== */
 .header {
+    height: 500px;
     background: url('1.jpg') no-repeat center center;
     background-size: cover;
-    height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
+}
+
+.header h1 {
     font-family: 'Courier New', monospace;
     font-size: 78px;
-    font-weight: bold;
     font-style: italic;
-    text-align: center;
+    margin: 0;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-/* 第二屏 */
-.section {
-    display: flex;
-    background-color: #87bde8;
-    color: black;
-    padding: 50px;
-    align-items: flex-start;
-    gap: 20px;
-}
-.section .text {
-    flex: 1;
+.header h2 {
     font-size: 32px;
-}
-.section .image-box {
-    flex: 1;
-}
-.section .image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+    margin: 10px 0 4px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-/* 虚线分隔线 */
+.header p {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+}
+
+/* ===== 虚线分隔（无外边距） ===== */
 .divider {
+    border: none;
     border-top: 2px dashed black;
     margin: 0;
 }
 
-/* 第三屏（新增教师简介） */
-.instructor-section {
-    display: flex;
-    background-color: #87bde8; /* 保持同色背景 */
+/* ===== 通用蓝色版面 ===== */
+.blue {
+    background-color: #87bde8;
     padding: 50px;
-    color: black;
+    box-sizing: border-box;
+}
+
+/* ===== 第二屏：文本 + 2.jpg 靠右 ===== */
+.section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.section .text {
+    flex: 1.2;
+    font-size: 32px;
+    padding-right: 20px;
+}
+
+.section .image {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section .image img {
+    width: 66%;
+    border-radius: 8px;
+}
+
+/* ===== Teaching Philosophy ===== */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.philosophy {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.double-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.double-img img {
+    width: 350px;
+    border-radius: 8px;
+}
+
+/* ===== About Instructor ===== */
+.instructor {
+    display: flex;
     gap: 30px;
 }
 
-/* 教师简介左标题 */
-.instructor-title {
-    flex: 1;
+.instructor .left {
     font-size: 48px;
     font-weight: bold;
-}
-
-/* 教师简介内容 */
-.instructor-text {
-    flex: 2;
-    font-size: 20px;
-    line-height: 1.0;
-}
-
-/* 第四屏（原第三屏）：课程介绍 */
-.section-two {
-    display: flex;
-    background-color: #87bde8;
-    color: black;
-    padding: 50px;
-    justify-content: space-between;
-    gap: 20px;
-}
-.section-two .left, .section-two .right {
     flex: 1;
-    font-size: 18px;
-}
-.section-two .left b, .section-two .right b {
-    font-weight: bold;
 }
 
-/* 页脚 */
+.instructor .right {
+    flex: 2;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* ===== Professional Recognition ===== */
+.professional {
+    text-align: center;
+}
+
+.professional p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.professional .double-img img {
+    width: 350px;
+}
+
+/* ===== Course Overview（左右并排版） ===== */
+.course {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 18px;
+    gap: 60px;
+}
+
+.course .block {
+    width: 280px;
+}
+
+/* ===== Footer ===== */
 .footer {
     background-color: #d3d3d3;
     padding: 20px;
     font-size: 13px;
-    color: black;
+}
+
+.footer a {
+    color: #0066cc;
+    text-decoration: none;
 }
 </style>
 </head>
+
 <body>
 
 <!-- 第一屏 -->
 <div class="header">
-    Love-Piano 100
+    <h1>Love-Piano 100</h1>
+    <h2>Discover Your Musical Journey</h2>
+    <p>Premier piano instruction for all ages and skill levels</p>
 </div>
 
+<hr class="divider">
+
 <!-- 第二屏 -->
-<div class="section">
+<div class="blue section">
     <div class="text">
         Located in Los Angeles, our piano studio offers professional and patient instruction to students of all ages.<br><br>
         From classical to popular, from basic to advanced, we help each student find their own musical language.
     </div>
-    <div class="image-box">
-        <img src="./2.jpg" alt="Studio Image">
+    <div class="image">
+        <img src="2.jpg" alt="Studio">
     </div>
 </div>
 
-<!-- 虚线 1 -->
 <hr class="divider">
 
-<!-- 第三屏（教师简介） -->
-<div class="instructor-section">
-    <div class="instructor-title">
-        <b>About the Instructor</b>
+<!-- Teaching Philosophy -->
+<div class="blue">
+    <div class="title">Our Teaching Philosophy</div>
+    <div class="philosophy">
+        Music learning is a lifelong process, and meaningful progress can happen at any age. Our teaching focuses on
+        building solid technique, musical understanding, and personal engagement.<br><br>
+        Lessons are adapted to each student’s goals and pace. For children, this means healthy foundations.
+        For adults, piano study supports focus, coordination, and creativity.
     </div>
 
-    <div class="instructor-text">
-        <b>Pat Yu</b> is a dedicated piano instructor with extensive experience in performance and music education. 
-        Trained in classical piano from a young age, she later continued her Bachelor's Program at 
-        <b>California State University Northridge</b>, where she strengthened her skills in piano performance, music theory, 
-        and pedagogical methods.<br><br>
-
-        Before teaching full-time, she was actively involved in solo performances and collaborative piano work. She also taught 
-        group lessons and private classes for undergraduate students as a 
-        <b>Graduate Teaching Assistant</b> at <b>Wichita State University</b>. These experiences shaped her clear, structured, 
-        and patient teaching style.<br><br>
-
-        She has worked with students ranging from young beginners to adult learners. Her lessons are highly personalized—
-        whether a student aims to build foundational skills or simply enjoy playing music, 
-        she designs a supportive and achievable learning plan.
+    <div class="double-img">
+        <img src="5.png">
+        <img src="6.png">
     </div>
 </div>
 
-<!-- 虚线 2（新增，放教师简介与课程介绍之间） -->
 <hr class="divider">
 
-<!-- 第四屏（课程介绍） -->
-<div class="section-two">
-    <div class="left">
+<!-- About Instructor -->
+<div class="blue instructor">
+    <div class="left">About the Instructor</div>
+    <div class="right">
+        <b>Pat Yu</b> is a dedicated piano instructor with extensive experience in performance and music education.
+        Trained from a young age, she completed her Bachelor’s program at
+        <b>California State University, Northridge</b>.<br><br>
+        She later served as a <b>Graduate Teaching Assistant</b> at <b>Wichita State University</b>, teaching both group
+        and private lessons. Her teaching style is structured, patient, and highly individualized.
+    </div>
+</div>
+
+<hr class="divider">
+
+<!-- Professional Recognition -->
+<div class="blue professional">
+    <div class="title">Professional Recognition & Artistic Engagement</div>
+    <p>
+        The instructor is a professional teaching artist with the Global Outstanding Chinese Artists Association (GOCAA),
+        actively involved in international artistic programs and events.
+    </p>
+
+    <div class="double-img">
+        <img src="3.jpg">
+        <img src="4.png">
+    </div>
+</div>
+
+<hr class="divider">
+
+<!-- Course Overview 左右并排 -->
+<div class="blue course">
+    <div class="block">
         <b>Course Overview</b><br>
         Private Lessons<br>
         Group Piano<br>
         Professional Coaching
     </div>
-    <div class="right">
+    <div class="block">
         <b>Multiple course approaches</b><br>
         in studio<br>
         at home<br>
@@ -166,11 +255,14 @@ body {
     </div>
 </div>
 
-<!-- 页脚 -->
+<hr class="divider">
+
+<!-- Footer -->
 <div class="footer">
-    Contact information<br>
-    Instagram: love_piano100<br>
-    Gmail: love.piano.00100@gmail.com
+    Instagram:
+    <a href="https://www.instagram.com/love_piano100" target="_blank">@love_piano100</a><br>
+    Email:
+    <a href="mailto:love.piano.00100@gmail.com">love.piano.00100@gmail.com</a>
 </div>
 
 </body>
